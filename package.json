@@ -1,0 +1,50 @@
+{
+	"name": "classcreator",
+	"displayName": "ClassCreator",
+	"description": "",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Kronx12/vscode-classCreator"
+	},
+	"engines": {
+		"vscode": "^1.43.2"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:classcreator.makeclass"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "classcreator.makeclass",
+				"title": "mc"
+			}
+		],
+		"keybindings":[
+			{
+				"command": "classcreator.makeclass",
+				"key": "ctrl+shift+c"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.43.2",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}
